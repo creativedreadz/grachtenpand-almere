@@ -1,6 +1,4 @@
-# slowsmokers static site generator with Pug
-
-*By michiel*
+# static site generator with Pug
 
 Source files are compiled (and copied) from the `src/` directory to the `dist/`. The `dist/` directory is empty by default and removed everytime Grunt launches to re-create / re-compile the source material to the destination directory.
 

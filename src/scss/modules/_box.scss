@@ -1,37 +1,18 @@
-.box-container{
-	display: flex;
-	height: 50px;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: center;
-	align-items: center;
-	align-content: stretch;
-	flex-items: 0 1 auto;
-	align-self: auto;
+.box-container {
+	@include flexbox;
+	@include flex-direction(row);
+	@include flex-wrap(nowrap);
+	@include justify-content(space-between);
+	@include align-items(stetch);
+	margin: 0 auto;
 }
 
-.box{
-	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: center;
-	align-items: center;
-	align-content: stretch;
-	flex-items: 0 1 auto;
-	align-self: auto;
-	
-
+.box {
+	padding: 20px;
+	box-sizing: border-box;
+	margin: 0px 15px;
 }
 
-.box--white{
-	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: center;
-	align-items: center;
-	align-content: stretch;
-	flex-items: 0 1 auto;
-	align-self: auto;
-
-
+.box--white {
+	background-color: #ffffff;
 }

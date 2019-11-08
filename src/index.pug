@@ -90,9 +90,8 @@ block content
 
 	section.box-container
 		#google-map
-				.box-container
-				.box
-
+		.box-container
+			.box.box--white
 				form.form(action='', method='get')
 					.form__row
 						label(for='name') Naam: 
@@ -113,17 +112,15 @@ block content
 					.form__row
 						input(type='submit', value='Verstuur')
 
-				.box-container
-				.box--white
-
-					h2 Contact
-						ul
-							li Pulsar Consult bv
-							li Arnold Trampe
-							li Kerkgracht 32
-							li 1354 AM, Almere-Haven
-							a(href="tel:+31653343834") 06-5334 3834
-							a(href="mailto:contact@grachtenpand-almere.nl") contact@grachtenpand-almere.nl
+			.box.box--white
+				h2 Contact
+					ul
+						li Pulsar Consult bv
+						li Arnold Trampe
+						li Kerkgracht 32
+						li 1354 AM, Almere-Haven
+						a(href="tel:+31653343834") 06-5334 3834
+						a(href="mailto:contact@grachtenpand-almere.nl") contact@grachtenpand-almere.nl
 
 block scripts
 	script(src='https://swiperjs.com/package/js/swiper.min.js')

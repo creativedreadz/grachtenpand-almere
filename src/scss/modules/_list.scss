@@ -1,3 +1,4 @@
+ul,
 .list {
 	list-style-type: none;
 	padding: 0;
@@ -5,13 +6,30 @@
 	display: inline-block;
 }
 
-.list__item {
-	line-height: 30px;
-	margin-bottom: 12px;
+.list--type-01 {
+	li {
+		line-height: 30px;
+		margin-bottom: 12px;
 
-	&::before {
-		content: '-';
-		display: inline-block;
-		margin-right: 10px;
+		&::before {
+			content: '-';
+			display: inline-block;
+			margin-right: 10px;
+		}
+	}
+}
+
+.list--type-02 {
+
+	li {
+		font-size: 20px;
+		line-height: 18px;
+	    margin-bottom: 12px;
+	}
+
+	a {
+		color: #be1522;
+		font-size: 20px;
+		text-decoration: none;
 	}
 }

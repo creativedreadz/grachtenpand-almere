@@ -1,2 +1,78 @@
 form {
+
+}
+
+input {
+    border: 0px;
+    padding: 6px 10px;
+    box-sizing: border-box;
+    outline: none;
+    font-size: 20px;
+    color: #3c3c3b;
+    width: 100%;
+    display: block;
+    margin: 0;
+    margin-bottom: 4px;
+    background: #e5e5e5;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+}
+
+input {
+    border: 0px;
+    padding: 6px 10px;
+    box-sizing: border-box;
+    outline: none;
+    font-size: 20px;
+    color: #3c3c3b;
+    width: 100%;
+	display: inline-block;
+    margin: 0;
+    margin-bottom: 4px;
+    background: #e5e5e5;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+}
+
+textarea {
+    color: #3c3c3b;
+    background: #e5e5e5;
+    display: inline-block;
+    border: 0px;
+    padding: 6px 10px;
+    box-sizing: border-box;
+    outline: none;
+    width: 100%;
+    min-height: 150px;
+}
+
+label {
+	display: block;
+}
+
+.form {
+	@include flexbox;
+	@include flex-direction(row);
+	@include flex-wrap(wrap);
+	@include justify-content(flex-start);
+	@include align-items(stretch);
+}
+
+.form__col {
+	@include flex(2, 1, auto);
+
+	&:first-child {
+		max-width: 200px;
+	}
+
+	&:last-child {
+		@include flex(2, 1, 100%);
+		text-align: right;
+	}
+}
+
+.form__row {
+	width: 100%;
 }

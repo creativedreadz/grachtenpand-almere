@@ -18,7 +18,7 @@ block content
 		.container
 			h1 Huur een (klein) kantoor of werkplek in 't grachtenpand.
 
-			ul.list
+			ul.list.list--type-01
 				li.list__item Hartje centrum Almere-Haven
 				li.list__item Representatief en goed bereikbaar
 				li.list__item Slimme werkruimtes van alle gemakken voorzien
@@ -88,39 +88,49 @@ block content
 
 			p In alle gevallen krijg je een eigen sleutel (borg € 50,-) en het gebouw staat jou 24 uur per dag ter beschikking.
 
-	section.box-container
+	section
 		#google-map
-		.box-container
-			.box.box--white
-				form.form(action='', method='get')
-					.form__row
-						label(for='name') Naam: 
-						input(type='text', name='name', required='', placeholder='bijv. frits janssen')
-					.form__row
-						label(for='email') E-mail 
-						input(type='email', name='email', required='', placeholder='jan@planet.nl')
-					.form__row
-						label(for='phone') Telefoon 
-						input(type='number', name='phone', required='', placeholder='0612345678')
-					.form__row
-						label(for='subject') Onderwerp 
-						input(type='text', name='subject', required='', placeholder='Vraag')
-					.form__row
-						label(for='message') Bericht
-						textarea(name='message', rows='5', cols='33')
-							| Laat hier uw bericht achter
-					.form__row
-						input(type='submit', value='Verstuur')
+		.container
+			.box-container
+				.box.box--twothird.box--white
+					form.form(action='', method='get')
 
-			.box.box--white
-				h2 Contact
-					ul
-						li Pulsar Consult bv
-						li Arnold Trampe
-						li Kerkgracht 32
-						li 1354 AM, Almere-Haven
-						a(href="tel:+31653343834") 06-5334 3834
-						a(href="mailto:contact@grachtenpand-almere.nl") contact@grachtenpand-almere.nl
+						.form__col
+							.form__row
+								label(for='name') Naam: 
+								input(type='text', name='name', required='', placeholder='bijv. frits janssen')
+							.form__row
+								label(for='email') E-mail 
+								input(type='email', name='email', required='', placeholder='jan@planet.nl')
+							.form__row
+								label(for='phone') Telefoon 
+								input(type='number', name='phone', required='', placeholder='0612345678')
+							.form__row
+								label(for='subject') Onderwerp 
+								input(type='text', name='subject', required='', placeholder='Vraag')
+
+						.form__col
+							.form__row
+								label(for='message') Bericht
+								textarea(name='message', rows='5', cols='33')
+									| Laat hier uw bericht achter
+						
+						.form__col
+							.form__row
+								button(type='submit') Verstuur
+
+				.box.box--onethird.box--white
+					h2 Contact
+					ul.list.list--type-02
+						li.list__item Pulsar Consult bv
+						li.list__item Arnold Trampe
+						li.list__item Kerkgracht 32
+						li.list__item 1354 AM, Almere-Haven
+						li.list__item 
+							a(href="tel:+31653343834") 06-5334 3834
+						li.list__item 
+							a(href="mailto:contact@grachtenpand-almere.nl") contact@grachtenpand-almere.nl
+
 
 block scripts
 	script(src='https://swiperjs.com/package/js/swiper.min.js')

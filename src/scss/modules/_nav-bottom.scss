@@ -1,0 +1,159 @@
+.nav-bottom {
+	position: relative;
+    z-index: 14;
+	padding: 0px;
+	box-sizing: border-box;
+	width: 100%;
+
+	@include respond-to-min('md') {
+		@include display-grid;
+		@include grid-template-columns(15% 1fr 1fr 15%);		
+	}
+
+}
+
+.nav-bottom__list {
+	display: inline-block;
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	line-height: 25px;
+}
+
+.nav-bottom__list-item {
+	display: inline-block;
+
+	a {
+		@include transition(all 0.3s ease-in-out);
+		font-family: map-get($fonts, primary);
+	}
+
+	&:hover {
+		a {
+			color: #ffffff;
+		}
+	}
+}
+
+.nav-bottom__list-social {
+	display: none;
+
+	@include respond-to-min('sm') {
+		display: inline-block;
+		@include grid-column(1, 1);
+		margin-right: 10px;
+	}
+
+	.nav-bottom__list-item {
+		a {
+			text-transform: uppercase;
+		}
+	}
+}
+
+.nav-bottom__list-contact {
+	display: none;
+
+	@include respond-to-min('sm') {
+		display: inline-block;
+	}
+
+	@include respond-to-min('md') {
+		@include grid-column(2, 1);
+		@include flexbox;
+		@include flex-wrap(wrap);
+		@include flex-direction(row);
+		@include justify-content(space-between);
+		max-width: 420px;
+	}
+}
+
+.nav-bottom__list-item-phone {
+
+	a {
+		span {
+			display: none;
+
+			@include respond-to-min('md') {
+				display: inline-block;
+			}
+		}
+
+		&:before {
+			margin-right: 10px;
+			vertical-align: top;
+			content: '';
+			display: inline-block;
+			position: relative;
+			height: 21px;
+			width: 15px;
+		    @include background-adaptive(#{$dir-img}/icon/icon-phone-black, png, 15px 21px);
+		    background-repeat: no-repeat;
+		    background-position: center center;
+			@include transition(all 0.3s ease-in-out);
+
+			@include respond-to-min('sm') {
+				margin-right: 14px;
+			}
+		}
+	}
+
+	&:hover {
+		a {
+			color: #ffffff;
+
+			&:before {
+			    @include background-adaptive(#{$dir-img}/icon/icon-phone-white, png, 15px 21px);
+			}
+		}
+	}
+}
+
+.nav-bottom__list-item-location {
+
+	a {
+		span {
+			&:first-child {
+				display: none;
+
+				@include respond-to-min('ml') {
+					display: inline-block;
+				}
+			}
+
+			&:last-child {
+				display: none;
+
+				@include respond-to-min('md') {
+					display: inline-block;
+					text-transform: capitalize;
+					margin-left: 4px;
+				}
+			}
+		}
+
+		&:before {
+			margin-right: 10px;
+			vertical-align: top;
+			content: '';
+			display: inline-block;
+			position: relative;
+			height: 21px;
+			width: 14px;
+		    @include background-adaptive(#{$dir-img}/icon/icon-location-black, png, 14px 21px);
+		    background-repeat: no-repeat;
+		    background-position: center center;
+			@include transition(all 0.3s ease-in-out);
+		}
+	}
+
+	&:hover {
+		a {
+			color: #ffffff;
+
+			&:before {
+		     	@include background-adaptive(#{$dir-img}/icon/icon-location-white, png, 14px 21px);
+			}
+		}
+	}
+}

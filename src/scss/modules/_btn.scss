@@ -1,0 +1,109 @@
+.btn {
+	@include transition(background 0.3s ease-in-out, color 0.3s ease-in-out);
+	color: #000000;
+	cursor: pointer;
+	display: inline-block;
+	font-family: map-get($fonts, primary);
+	font-weight: 700;
+	font-size: 17px;
+	outline: none;
+	padding: 17.5px 35px;
+	margin: 0px;
+	position:relative;
+	text-align: center;
+	text-decoration: none;
+	vertical-align: middle;
+	line-height: 1;
+
+	@include respond-to-min('sm') {
+		padding: 17.5px 35px;
+	}
+}
+
+.btn--type-01 {
+	color: map-get($colors, 01);
+	// border: 1.6px solid map-get($colors, 04);
+	background-color: map-get($colors, 02);
+
+	span {
+		margin-left: 12px;
+	}
+
+	&:hover,
+	&:focus {
+		background-color: map-get($colors, 01);
+		color: map-get($colors, 02);
+		// border: 1.6px solid map-get($colors, 04);
+	}
+}
+
+.btn--type-02 {
+	color: map-get($colors, 10);
+	// border: 1.6px solid map-get($colors, 10);
+	background-color: transparent;
+
+	&:hover,
+	&:focus {
+		background-color: map-get($colors, 10);
+		color: map-get($colors, 02);
+		// border: 1.6px solid map-get($colors, 10);
+	}
+}
+
+.btn--video {
+	width: 88px;
+	height: 88px;
+	border-radius: 100%;
+	outline: none;
+	border: none;
+	background-color: map-get($colors, 02);
+	@include flexbox;
+	@include justify-content(center);
+	@include align-items(center);
+	padding: 0;
+
+	span {
+		margin-left: 15px;
+	}
+
+	&:hover,
+	&:focus {
+		background-color: map-get($colors, 01);
+
+		.icon--play {
+		    background-image: url(#{$dir-img}/icon/icon-play-white.svg);
+		}
+	}
+}
+
+
+.btn-link {
+	@include transition(color 0.3s ease-in-out);
+	color: #000000;
+	cursor: pointer;
+	display: inline-block;
+	font-family: map-get($fonts, primary);
+	font-weight: 400;
+	font-size: 17px;
+	outline: none;
+	margin: 0;
+	position:relative;
+	text-decoration: none;
+	vertical-align: middle;
+	line-height: 1;
+}
+
+.btn-link--type-01 {
+	font-family: map-get($fonts, primary);
+	font-weight: 700;
+	color: map-get($colors, 01);
+
+	span {
+		margin-right: 12px;
+	}
+
+	&:hover,
+	&:focus {
+		color: map-get($colors, 02);
+	}
+}

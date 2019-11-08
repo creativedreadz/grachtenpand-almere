@@ -1,0 +1,10 @@
+.gallery {
+	@include flexbox;
+	height: 260px;
+}
+
+.gallery__image {
+	width: 100%;
+	background-size: cover;
+	background-position: center center;
+}

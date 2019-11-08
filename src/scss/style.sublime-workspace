@@ -1,0 +1,389 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"backgroun",
+				"background-size"
+			],
+			[
+				"tra",
+				"transparent"
+			],
+			[
+				"back",
+				"background-repeat"
+			],
+			[
+				"background-c",
+				"background-color"
+			],
+			[
+				"baa",
+				"background-image"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"pos",
+				"pos-r\tposition: relative;"
+			],
+			[
+				"mar",
+				"margin-top"
+			],
+			[
+				"padding",
+				"padding-top"
+			],
+			[
+				"inca",
+				"incas\tScss Include-Align-Self"
+			],
+			[
+				"mi",
+				"middle"
+			],
+			[
+				"font",
+				"font-weight"
+			],
+			[
+				"backgrou",
+				"background-position"
+			],
+			[
+				"background",
+				"background-size"
+			],
+			[
+				"font-s",
+				"font-size"
+			],
+			[
+				"icon",
+				"icon-magnifer"
+			],
+			[
+				"margin",
+				"margin-left"
+			],
+			[
+				"backgro",
+				"background-size"
+			],
+			[
+				"inc",
+				"incjc\tScss Include-Justify-content"
+			],
+			[
+				"list-style",
+				"list-style-type"
+			],
+			[
+				"bO",
+				"border"
+			],
+			[
+				"list",
+				"list-style"
+			],
+			[
+				"alig",
+				"text-align"
+			],
+			[
+				"tex",
+				"text-align"
+			],
+			[
+				"img",
+				"border-image-width"
+			],
+			[
+				"al",
+				"text-align"
+			],
+			[
+				"im",
+				"list-style-image"
+			],
+			[
+				"p",
+				"position"
+			],
+			[
+				"bdi",
+				"border-image-source"
+			],
+			[
+				"ma",
+				"max-width"
+			],
+			[
+				"text",
+				"text-transform"
+			],
+			[
+				"li",
+				"list-style-type"
+			],
+			[
+				"re",
+				"relative"
+			],
+			[
+				"a",
+				"absolute"
+			],
+			[
+				"inl",
+				"inline-block"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"f",
+				"fixed\tposition"
+			],
+			[
+				"text-a",
+				"text-align\tproperty"
+			],
+			[
+				"border-r",
+				"border-radius"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 361.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 493.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/stevengibbs/Documents/Websites/drt/src/scss/helpers/_config.scss",
+		"/Users/stevengibbs/Documents/Websites/drt/src/scss/layout/_wrapper.scss",
+		"/Users/stevengibbs/Documents/Websites/drt/src/scss/base/_elements.scss",
+		"/Users/stevengibbs/Documents/Websites/drt/src/scss/layout/_header.scss",
+		"/Users/stevengibbs/Documents/Websites/drt/src/scss/modules/_list.scss",
+		"/Users/stevengibbs/Documents/Websites/drt/src/scss/base/_typography.scss",
+		"/Users/stevengibbs/Documents/Websites/drt/src/scss/layout/_section.scss",
+		"/Users/stevengibbs/Documents/Websites/drt/src/scss/layout/_container.scss",
+		"/Users/stevengibbs/Documents/Websites/drt/src/scss/layout/_footer.scss",
+		"/Users/stevengibbs/Documents/Websites/drt/src/scss/modules/_icon.scss",
+		"/Users/stevengibbs/Documents/Websites/drt/src/scss/modules/_form.scss",
+		"/Users/stevengibbs/Documents/Websites/drt/src/scss/modules/_link.scss",
+		"/Users/stevengibbs/Documents/Websites/drt/src/scss/helpers/_font.scss",
+		"/Users/stevengibbs/Documents/Websites/drt/src/scss/modules/_article.scss",
+		"/Users/stevengibbs/Documents/Websites/drt/src/scss/helpers/_common.scss",
+		"/Applications/_icon.scss",
+		"/Users/stevengibbs/Documents/Websites/drt/src/scss/style.scss",
+		"/Users/stevengibbs/Documents/Websites/drt/src/extends/master.pug",
+		"/Users/stevengibbs/Documents/Websites/drt/src/includes/footer.pug",
+		"/Users/stevengibbs/Documents/Websites/drt/src/includes/config.pug",
+		"/Users/stevengibbs/Documents/Websites/drt/src/includes/header.pug",
+		"/Users/stevengibbs/Documents/Websites/drt/src/index.pug",
+		"/Users/stevengibbs/Documents/Websites/drt/Gruntfile.js",
+		"/Users/stevengibbs/Documents/Websites/drt/src/scss/modules/_typography.scss",
+		"/Users/stevengibbs/Documents/Websites/drt/src/scss/modules/_table.scss",
+		"/Users/stevengibbs/Documents/Websites/drt/src/scss/layout/section/_section__style.scss",
+		"/Users/stevengibbs/Documents/Websites/drt/dist/css/style.css",
+		"/Users/stevengibbs/Documents/development/project1/index.html"
+	],
+	"find":
+	{
+		"height": 30.0
+	},
+	"find_in_files":
+	{
+		"height": 158.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 30.0
+	},
+	"input":
+	{
+		"height": 68.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.sftp":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "style.sublime-project",
+	"replace":
+	{
+		"height": 56.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"config",
+				"scss/helpers/_config.scss"
+			],
+			[
+				"style",
+				"scss/style.scss"
+			],
+			[
+				"icon.scs",
+				"scss/modules/_icon.scss"
+			],
+			[
+				"ele",
+				"scss/base/_elements.scss"
+			],
+			[
+				"style.scss",
+				"scss/style.scss"
+			],
+			[
+				"mas",
+				"extends/master.pug"
+			],
+			[
+				"header",
+				"includes/header.pug"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/Documents/sublime/proj-01.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 263.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+		"max_columns": 2
+	}
+}

@@ -1,0 +1,119 @@
+.nav-direction {
+    position: fixed;
+    z-index: 15;
+    bottom: 30px;
+    right: 20px;
+	padding: 0px;
+	box-sizing: border-box;
+	-webkit-transform: translateZ(0);
+	-moz-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	-o-transform: translateZ(0);
+	transform: translateZ(0);
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-webkit-transition: -webkit-transform .7s;
+	-moz-transition: -moz-transform .7s;
+	transition: transform .7s;
+	-webkit-transition-timing-function: cubic-bezier(.91,.01,.6,.99);
+	-moz-transition-timing-function: cubic-bezier(.91,.01,.6,.99);
+	transition-timing-function: cubic-bezier(.91,.01,.6,.99);
+
+	@include respond-to-min('ml') {
+	    bottom: 50px;
+	    right: 40px;
+	}
+
+	@include respond-to-min('xl') {
+	    bottom: 50px;
+	    right: 90px;
+	}	
+}
+
+.nav-direction__container {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	width: 88px;
+	height: 88px;
+	@include flexbox;
+	@include flex-direction(column);	
+	@include flex-wrap(wrap);
+	@include justify-content(flex-start);
+	@include align-items(flex-start);
+
+	@include respond-to-min('sm') {
+		width: 88px;
+		height: 88px;
+	}
+}
+
+.nav-direction-arrow {
+	@include flexbox;
+	@include align-items(flex-start);
+	@include flex(2, 1, auto);
+	width: 44px;
+	height: 44px;
+	position: relative;
+	box-sizing: border-box;
+
+	&:first-child {
+
+		&:hover {
+			.icon--arrow-up {
+			    @include background-adaptive(#{$dir-img}/arrow/arrow-02-up-white, png, 24px 14px, true);
+
+			    @include respond-to-min('md') {
+			        @include background-adaptive(#{$dir-img}/arrow/arrow-up-white, png, 23px 30px, true);
+			    } 
+			}
+		}
+
+		a {
+			position: absolute;
+			width: 44px;
+			height: 44px;
+			font-size: 20px;
+			right: 0px;
+			bottom: 0px;
+			left: 0px;
+			top: 0px;
+			z-index: 3;
+			cursor: pointer;
+		}
+	}
+
+	&:last-child {
+		@include align-items(flex-end);
+		@include align-self(flex-end);
+
+		&:hover {
+			.icon--arrow-down {
+			    @include background-adaptive(#{$dir-img}/arrow/arrow-02-down-white, png, 24px 14px, true);
+
+			    @include respond-to-min('md') {
+			        @include background-adaptive(#{$dir-img}/arrow/arrow-down-white, png, 23px 30px, true);
+			    } 
+			}
+		}
+
+		a {		
+			position: absolute;
+			width: 44px;
+			height: 44px;
+			font-size: 20px;
+			right: 0px;
+			bottom: 0px;
+			left: 0px;
+			top: 0px;
+			z-index: 3;
+			cursor: pointer;
+		}
+	}
+
+	@include respond-to-min('sm') {
+		width: 44px;
+		height: 44px;
+	}
+}
+

@@ -1,0 +1,162 @@
+.grid {
+	position: relative;
+	@include display-grid;
+	@include grid-template-rows (auto);	
+	@include grid-template-columns(repeat(4, 1fr));
+	@include grid-template-rows(auto);
+
+	@include respond-to-min('md') {
+		@include grid-template-columns(repeat(8, 1fr));
+	}
+
+	@include respond-to-min('lg') {
+		@include grid-template-columns(repeat(12, 1fr));
+	}
+}
+
+.grid__col {	
+}
+
+.grid-type-01 {
+	@include grid-template-rows(1fr 1fr);
+
+	.grid__col-left {
+		@include grid-column (1 / span 3);
+		@include grid-row (1 / span 2);
+
+		@include respond-to-min('md') {
+			@include grid-column (1 / span 2);
+		}
+
+		@include respond-to-min('lg') {
+			@include grid-column (1 / span 3);
+		}
+	}
+
+	.grid__col-center {
+		@include grid-column (1 / span 3);
+		@include grid-row (1 / span 2);
+
+		@include respond-to-min('md') {
+			@include grid-column (3 / span 4);
+		}
+
+		@include respond-to-min('lg') {
+			@include grid-column (4 / span 6);
+		}
+	}
+
+	.grid__col-right {
+		@include flexbox;
+		@include justify-content(center);
+		@include flex-direction(column);
+		@include grid-column (4 / span 1);
+		@include grid-row (1 / span 2);
+
+		@include respond-to-min('md') {
+			@include grid-column (7 / span 2);
+		}
+
+		@include respond-to-min('lg') {
+			@include grid-column (12 / span 1);
+		}
+	}
+
+}
+
+.grid-type-02 {
+	.grid__col-left {
+		@include grid-column (1 / span 1);
+		@include flexbox;
+		@include justify-content(center);
+		@include flex-direction(column);
+	}
+
+	.grid__col-right {
+		@include grid-column (2 / span 3);
+
+		@include respond-to-min('md') {
+			@include grid-column (2 / span 7);
+		}
+
+		@include respond-to-min('lg') {
+			@include grid-column (3 / span 10);
+		}
+	}
+}
+
+.grid-type-03 {
+	.grid__col-left {
+		@include grid-column (2 / span 6);
+
+		@include respond-to-min('md') {
+			@include grid-column (2 / span 6);
+		}
+
+		@include respond-to-min('lg') {
+			@include grid-column (3 / span 8);
+		}
+	}
+
+	.grid__col-right {
+		@include flexbox;
+		@include justify-content(center);
+		@include flex-direction(column);
+		@include grid-column (8 / span 1);
+
+		@include respond-to-min('md') {
+			@include grid-column (2 / span 6);
+		}
+
+		@include respond-to-min('lg') {
+			@include grid-column (12 / span 1);
+		}
+
+	}
+}
+
+.grid-type-04 {
+	.grid__col-left {
+		@include grid-column (1 / span 1);
+		@include flexbox;
+		@include justify-content(center);
+		@include flex-direction(column);
+
+		@include respond-to-min('md') {
+		}
+
+		@include respond-to-min('lg') {
+		}
+	}
+
+	.grid__col-center {
+		@include grid-column (2 / span 7);
+
+		@include respond-to-min('md') {
+		}
+
+		@include respond-to-min('lg') {
+		}
+	}
+
+	.grid__col-right {
+		@include grid-column (9 / span 3);
+
+		@include respond-to-min('md') {
+		}
+
+		@include respond-to-min('lg') {
+		}
+	}
+}
+
+.grid__col.grid__col-box {
+	display: block;
+	outline: 1px solid red;
+	background-color: blue;
+	height: 100%;
+	grid-row: 2 / span 2;
+	grid-column: 1 / span 12;
+    padding-bottom: 95px;
+    margin: 0px -50px;
+}

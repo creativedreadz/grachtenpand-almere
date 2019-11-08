@@ -1,0 +1,44 @@
+h1, h2, h3, h4, h5, h6 {
+	display: block;
+	font-family: map-get($fonts, Primary);
+	font-weight: 700;
+}
+
+a, p, small, ul, label, button {
+	font-family: map-get($fonts, Primary);
+	font-size: 23px;
+}
+
+a {
+	font-weight: 700;
+}
+
+p {
+	font-weight: 400;
+}
+
+
+
+.spacing-top-sm {
+	margin-top: 12.5px;
+}
+
+.spacing-top-md {
+	margin-top: 50px;
+}
+
+.spacing-top-lg {
+	margin-top: 100px;
+}
+
+.spacing-bottom-sm {
+	margin-bottom: 12.5px;
+}
+
+.spacing-bottom-md {
+	margin-bottom: 50px;
+}
+
+.spacing-bottom-lg {
+	margin-bottom: 100px;
+}

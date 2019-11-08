@@ -1,0 +1,233 @@
+.content {
+
+	h1, h2, h3, h4, h5, h6 {
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+
+	p + .btn {
+		margin-top: 45px;
+	}
+
+
+}
+
+.content--type-01 {
+	bottom: 10%;
+	left: 0;
+	right: 0;
+	position: absolute;
+	text-align: center;
+	padding: 20px;
+	
+	p, h1, h2, h3, h4, h5, h6 {
+		color: map-get($colors, 10);
+
+		&:first-child {
+			margin-top: 0px;
+		}
+	}
+
+	.btn {
+		margin-top: 45px;
+	}
+
+	@include respond-to-min('md') {	
+		padding: 0;
+	}
+
+	@include respond-to-min('xl') {	
+		@include grid-column(4, 6);
+	}
+
+}
+
+.content--type-01__title {
+	// font-family: $font-bold;
+	margin-bottom: 25px;
+	max-width: 540px;
+	margin: auto;
+	font-size: 2.592em;
+	text-transform: initial;
+
+	@include respond-to-min('md') {
+		font-size: 3.732em;
+	}
+}
+
+.content--type-01__copy {
+}
+
+.content--type-02 {
+
+	img {
+		position: relative;
+		display: inline-block;
+		width: 100%;
+		height: auto;
+		max-height: 157px;
+
+		@include respond-to-min('xl') {
+			width: 570px;
+			height: 320px;
+			position: relative;
+			left: -60px;
+		}
+
+	}
+
+	@include respond-to-min('md') {	
+		@include grid-column(2, 5);
+	}
+
+}
+
+.content--type-03 {
+	@include respond-to-min('md') {
+		@include grid-column(7, 5); 
+	}
+	
+	@include respond-to-min('xl') {
+		@include grid-column(8, 5); 
+	}
+
+
+}
+
+.content--type-04 {
+	@include grid-column(2, 5);
+}
+
+.content--type-05 {
+	@include grid-column(8, 5);
+
+	.img-container {
+		display: block;
+		position: relative;
+		width: 100%;
+		height: 420px;
+		background-image: url('/img/video/placeholder.jpg');
+		background-position: center center;
+		background-size: cover;
+		background-repeat: no-repeat;
+
+		@include respond-to-min('md') {
+			position: relative;
+			width: 50vw;
+			height: calc(100% + 150px);
+			margin-top: -75px;
+		}
+
+		@include respond-to-min('ml') {
+			height: calc(100% + 290px);
+			margin-top: -145px;
+		}
+
+	}
+
+}
+
+.content--type-06 { 
+	@include respond-to-min('md') {
+		@include grid-column(2, 10);
+	}
+
+	@include respond-to-min('xl') {
+		@include grid-column(2, 8); 
+	}
+}
+
+.content--type-07 {
+	@include respond-to-min('md') {
+		@include grid-column(2, 10); 
+	}
+
+	@include respond-to-min('xl') {
+		@include grid-column(1, 12); 
+	}
+}
+
+.content--type-07__quote {
+	font-size: 2.592em;
+	text-align: center;
+
+	@include respond-to-min('md') {
+		font-size: 3.11em;
+	}
+
+	@include respond-to-min('xl') {
+		font-size: 3.732em;
+		max-width: 970px;
+		margin: auto;
+	}
+
+}
+
+.content--type-08 { 
+	@include respond-to-min('md') {
+		@include grid-column(2, 10);
+	} 
+
+	@include respond-to-min('xl') {
+		@include grid-column(2, 8);
+	}
+}
+
+
+.content--type-09 {
+
+	img {
+		position: relative;
+		display: inline-block;
+		width: 100%;
+		height: auto;
+
+		@include respond-to-min('xl') {
+			width: 570px;
+			height: 320px;
+			position: relative;
+			left: -60px;
+		}
+
+	}
+
+	@include respond-to-min('md') {	
+		@include grid-column(2, 5);
+	}
+
+}
+
+.content--type-10 {
+
+	a {
+		display: block;
+		@include flexbox;
+		@include flex-direction(row);
+		@include flex-wrap(wrap);
+		@include justify-content(flex-start);
+		@include align-items(center);
+		margin-bottom: 10px;
+		
+		.icon {
+			margin-right: 10px;
+		}
+	}
+
+
+	@include respond-to-min('md') {
+		@include grid-column(7, 5); 
+	}
+	
+	@include respond-to-min('xl') {
+		@include grid-column(8, 5); 
+	}
+
+
+}
+
+.content--type-10__title {
+	margin-bottom: 10px;
+	display: block;
+	width: 100%;
+}

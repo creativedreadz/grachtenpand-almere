@@ -1,0 +1,281 @@
+.slide1 {
+	min-height: 100vh;
+	background-color: #fd9596;
+}
+
+.slide2 {
+	min-height: 100vh;
+	background-color: #ffcf00;
+}
+
+.slide3 {
+	min-height: 100vh;
+	background-color: #72c7b4;
+}
+
+.slide {
+    min-height: 100vh;
+}
+
+.slide--image {
+	@include flexbox;
+
+	img {
+		margin: auto;
+		max-width: 100%;
+	}
+}
+
+.slide--video-fullscreen {
+    position: relative;	
+    width: 100%;
+    min-height: 100vh;
+
+    video {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background-size: 100% 100%;
+        background-color: black;
+        // background-image: /* our video */;
+        background-position: center center;
+        background-size: contain;
+        object-fit: cover;
+        z-index: 3;
+    }
+
+    button {
+        position: absolute;
+        z-index: 4;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);  
+    }
+
+}
+
+.slide--video-mockup {
+    position: relative;
+
+    video {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%); 
+        background-size: 100% 100%;
+        background-color: black;
+        // background-image: /* our video */;
+        background-position: center center;
+        background-size: contain;
+        object-fit: cover;
+        z-index: 3;
+    }
+
+    button {
+        position: absolute;
+        z-index: 4;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);  
+    }
+
+}
+
+body.fp-viewing-1-0 {
+	.line-trough--01 {
+		&:before {
+			width: 0%;
+		}
+	}
+}
+
+body.fp-viewing-1-1 {
+	.line-trough--02 {
+		&:before {
+			width: 0%;
+		}
+	}
+}
+
+body.fp-viewing-1-2 {
+	.line-trough--03 {
+		&:before {
+			width: 0%;
+		}
+	}
+}
+
+
+
+// .section.section--purple.active {
+// 	.section__background-img-project {
+// 		@include transition(all 0.5s ease-in-out);
+// 		opacity: 1;
+// 		background-position: 0px 0px;
+// 	}
+// }
+
+// .section.section--purple {
+// 	.section__background-img-project {
+// 		@include transition(all 0.5s ease-in-out);
+// 		opacity: 0;
+// 		background-position: 0px -118.5px;
+// 	}
+// }
+
+
+
+// /*================================================================
+// Animation - Move Up and Move Down Letters
+// ================================================================*/
+// /*================================================================
+// Move Up
+// ================================================================*/
+// @keyframes moveUp {
+//     0% {
+//         transform: translate3d(0px, 0px, 0px);
+//         animation-timing-function: ease-in;
+//     }
+		 
+//     50% {
+//         transform: translate3d(0px, 10px, 0px);
+//         animation-timing-function: ease-out;
+//     }
+		 
+//     100% {
+//         transform: translate3d(0px, 0px, 0px);
+//         animation-timing-function: ease-in;
+//     }
+// }
+// @-webkit-keyframes moveUp {
+//     0% {
+//         transform: translate3d(0px, 0px, 0px);
+//         animation-timing-function: ease-in;
+//     }
+		 
+//     50% {
+//         transform: translate3d(0px, 10px, 0px);
+//         animation-timing-function: ease-out;
+//     }
+		 
+//     100% {
+//         transform: translate3d(0px, 0px, 0px);
+//         animation-timing-function: ease-in;
+//     }
+// }
+// @-moz-keyframes moveUp {
+//     0% {
+//         transform: translate3d(0px, 0px, 0px);
+//         animation-timing-function: ease-in;
+//     }
+		 
+//     50% {
+//         transform: translate3d(0px, 10px, 0px);
+//         animation-timing-function: ease-out;
+//     }
+		 
+//     100% {
+//         transform: translate3d(0px, 0px, 0px);
+//         animation-timing-function: ease-in;
+//     }
+// }
+// @-ms-keyframes moveUp {
+//     0% {
+//         transform: translate3d(0px, 0px, 0px);
+//         animation-timing-function: ease-in;
+//     }
+		 
+//     50% {
+//         transform: translate3d(0px, 10px, 0px);
+//         animation-timing-function: ease-out;
+//     }
+		 
+//     100% {
+//         transform: translate3d(0px, 0px, 0px);
+//         animation-timing-function: ease-in;
+//     }
+// }
+
+// .moveUp{
+//     animation: moveUp 2s infinite;
+// }
+// /*================================================================
+// Move Down
+// ================================================================*/
+// @keyframes moveDown {
+//     0% {
+//         transform: translate3d(0px, 0px, 0px);
+//         animation-timing-function: ease-in;
+//     }
+		 
+//     50% {
+//         transform: translate3d(0px, -10px, 0px);
+//         animation-timing-function: ease-out;
+//     }
+		 
+//     100% {
+//         transform: translate3d(0px, 0px, 0px);
+//         animation-timing-function: ease-in;
+//     }
+// } 
+// @-webkit-keyframes moveDown {
+//     0% {
+//         transform: translate3d(0px, 0px, 0px);
+//         animation-timing-function: ease-in;
+//     }
+		 
+//     50% {
+//         transform: translate3d(0px, -10px, 0px);
+//         animation-timing-function: ease-out;
+//     }
+		 
+//     100% {
+//         transform: translate3d(0px, 0px, 0px);
+//         animation-timing-function: ease-in;
+//     }
+// } 
+// @-moz-keyframes moveDown {
+//     0% {
+//         transform: translate3d(0px, 0px, 0px);
+//         animation-timing-function: ease-in;
+//     }
+		 
+//     50% {
+//         transform: translate3d(0px, -10px, 0px);
+//         animation-timing-function: ease-out;
+//     }
+		 
+//     100% {
+//         transform: translate3d(0px, 0px, 0px);
+//         animation-timing-function: ease-in;
+//     }
+// } 
+// @-ms-keyframes moveDown {
+//     0% {
+//         transform: translate3d(0px, 0px, 0px);
+//         animation-timing-function: ease-in;
+//     }
+		 
+//     50% {
+//         transform: translate3d(0px, -10px, 0px);
+//         animation-timing-function: ease-out;
+//     }
+		 
+//     100% {
+//         transform: translate3d(0px, 0px, 0px);
+//         animation-timing-function: ease-in;
+//     }
+// } 
+
+// .moveDown{
+//     animation: moveDown 2s infinite;
+// }
+
+

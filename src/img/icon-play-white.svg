@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="11px" height="15px" viewBox="0 0 11 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+    <title>icon-play-white</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M0,13.8362839 C0,14.3328191 0.517840048,14.6286272 0.904183634,14.3539482 L10.18283,7.75730212 C10.5290264,7.51183107 10.5290264,6.96930897 10.1839937,6.72321647 L0.90534732,0.105441219 C0.518421891,-0.169859226 0,0.125948927 0,0.622484041 L0,13.8362839 Z" id="path-1"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <use id="icon-play-white" fill="#FFFFFF" xlink:href="#path-1"></use>
+    </g>
+</svg>

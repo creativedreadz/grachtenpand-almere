@@ -1,0 +1,139 @@
+extends extends/master
+
+block content
+
+	section#welcome
+		.swiper-container
+			.swiper-wrapper
+				.swiper-slide
+					img(src="http://grachtenpand-almere.nl/static/img/stock/header.jpg", alt="")
+				.swiper-slide
+					video(poster='http://grachtenpand-almere.nl/static/video/grachtenpand_web.jpg', preload='auto', loop='', autoplay='')
+						source(src='http://grachtenpand-almere.nl/static/video/grachtenpand_web.mp4', type='video/mp4')
+
+		.container
+			h1 Ook uitgekeken op een onpersoonlijk bedrijventerrein?
+
+	section
+		.container
+			h1 Huur een (klein) kantoor of werkplek in 't grachtenpand.
+
+			ul
+				li Hartje centrum Almere-Haven
+				li Representatief en goed bereikbaar
+				li Slimme werkruimtes van alle gemakken voorzien
+				li Gratis parkeren
+
+	section#hetpand
+		.container
+			img(src="http://grachtenpand-almere.nl/static/img/logo_s.png", alt="")
+			img.spacing-top-md(src="http://grachtenpand-almere.nl/static/img/stock/dinnerroom.jpg", alt="")
+			h1 Laat je uitdagen
+			p  Veel zelfstandigen beginnen thuis. Maar zijn dat na een tijdje ook beu. Laat je enthousiasmeren door andere ondernemers zoals jij. Maak contact, vergroot je netwerk. In het pand is alles aanwezig om geconcentreerd te werken op een goede werkplek met alle benodigde ondersteunende faciliteiten. Er zijn meerdere bedrijven gevestigd. Innovatief en grotendeels werkzaam in de dienstverlenende en creatieve sector.
+
+	section
+		.container
+			h1 De locatie
+			p Amere-Haven is in de loop der jaren uitgegroeid tot een stadsdeel met karakter en een duidelijke eigen identiteit. Met name de grachten zijn gezichtsbepalend en vormen een uitstraling waar menige onderneming zich graag mee associeert. Flexcentrum ‘t Grachtenpand ligt centraal aan de Kerkgracht.
+
+			p Het centrum van Almere-Haven heeft ook veel te bieden als het gaat om levendigheid. Aan de haven zelf (op 3 minuten loopafstand) bevinden zich talloze terrassen waar het heerlijk toeven is. Er is een schakering aan restaurants waar de mogelijkheden variëren van eerste klas tot een broodje tussen de middag.
+
+	img(src="http://grachtenpand-almere.nl/static/img/stock/collage.jpg", alt="")
+
+	section#kantoren
+		.container
+			h1 Kantoren en Bedrijfsruimten
+			p  ‘t Grachtenpand is een van de eerste gebouwen van Almere en dateert uit 1978. Omdat het goed is onderhouden en veel kantoren onlangs nog zijn gerenoveerd, heeft het veel karakter en authenticiteit. Warme kleuren voeren de boventoon.
+
+			p Het gebouw is veel groter dan het aan de voorzijde lijkt. Een deel van de beschikbare kantoren kijkt uit op de gracht en een ander deel kijkt uit op de groene patio’s. De ruimtes variëren in grootte van 18 m2 tot circa 100 m2. Ook is het mogelijk meerdere ruimtes te huren, zodat de indeling flexibel is.
+
+			p Alle ruimtes zijn voorzien van vloerbedekking, plafondverlichting en zonnewering in de vorm van lamellen.
+
+	section
+		.container
+			h1 Bekijk het pand in 360 graden
+
+			iframe(src='https://www.flexas.nl/embed/11614', style='width: 100%; height: 360px;')
+
+	section
+		.container
+			h1 Faciliteiten
+			p Glasvezel is aanwezig en Wifi is overal gratis in het gebouw beschikbaar. De intercom werkt zodanig dat vanaf elke willekeurige telefoon met bezoekers kan worden gesproken en opengedaan. Dus ook als je niet op kantoor bent.
+
+			p In het gebouw bevindt zich een drietal pantry’s waar een kleine lunch en een prima espresso kunnen worden gemaakt. Uiteraard zijn er ook vaatwasmachines aanwezig.
+
+	img(src="http://grachtenpand-almere.nl/static/img/stock/garden.jpg", alt="")
+
+	section
+		.container
+			h1 Flexplekken
+			p  Er is een aantal flexplekken beschikbaar die voor één of meerdere dagen per week gehuurd kunnen worden. Er zijn kasten waarin je jouw spullen op kunt bergen. Je krijgt een naambordje bij de voordeur en als er gebeld wordt gaat jouw eigen telefoon. Kopiëren en printen kan voor een klein bedrag.
+
+	section
+		.container
+			h1 Bereikbaarheid en parkeren
+			p Het is ook mogelijk het gebouw aan de achterzijde te betreden waar veel parkeerruimte is. Mocht het daar niet meteen lukken, dan staat er een ruime openbare parkeergarage tot je beschikking op nog geen 100 meter afstand.
+
+			p Openbaarvervoer rijdt af en aan en is op 2 min. loopafstand te vinden. Amsterdam (Amstelstation) is 35 minuten en Almere-Stad nog geen 20.
+
+
+	img(src="http://grachtenpand-almere.nl/static/img/stock/roofs.jpg", alt="")
+
+	section#prijzen
+		.container
+			h1 Prijzen
+			p Kantoren: vanaf € 235,- per maand (excl. servicekosten)
+
+			p Flexplek: vanaf € 30,- per maand (1 dag per week, incl. servicekosten)
+
+			p In alle gevallen krijg je een eigen sleutel (borg € 50,-) en het gebouw staat jou 24 uur per dag ter beschikking.
+
+	section.box-container
+		#google-map
+				.box-container
+				.box
+
+				form.form(action='', method='get')
+					.form__row
+						label(for='name') Naam: 
+						input(type='text', name='name', required='', placeholder='bijv. frits janssen')
+					.form__row
+						label(for='email') E-mail 
+						input(type='email', name='email', required='', placeholder='jan@planet.nl')
+					.form__row
+						label(for='phone') Telefoon 
+						input(type='number', name='phone', required='', placeholder='0612345678')
+					.form__row
+						label(for='subject') Onderwerp 
+						input(type='text', name='subject', required='', placeholder='Vraag')
+					.form__row
+						label(for='message') Bericht
+						textarea(name='message', rows='5', cols='33')
+							| Laat hier uw bericht achter
+					.form__row
+						input(type='submit', value='Verstuur')
+
+				.box-container
+				.box--white
+
+					h2 Contact
+						ul
+							li Pulsar Consult bv
+							li Arnold Trampe
+							li Kerkgracht 32
+							li 1354 AM, Almere-Haven
+							a(href="tel:+31653343834") 06-5334 3834
+							a(href="mailto:contact@grachtenpand-almere.nl") contact@grachtenpand-almere.nl
+
+block scripts
+	script(src='https://swiperjs.com/package/js/swiper.min.js')
+	script.
+		var swiper = new Swiper('.swiper-container', {
+			spaceBetween: 0,
+			effect: 'fade',
+			loop: true,
+			//- autoplay: {
+			//-   delay: 5000,
+			//-   disableOnInteraction: false,
+			//- },
+		});

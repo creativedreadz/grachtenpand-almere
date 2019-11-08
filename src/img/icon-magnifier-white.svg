@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+    <title>icon-magnifier-white</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon-magnifier-white" fill="#FFFFFF" fill-rule="nonzero">
+            <path d="M8,0 C3.581722,0 0,3.581722 0,8 C0,12.418278 3.581722,16 8,16 C9.77836872,16.0024877 11.5052899,15.4033518 12.9,14.3 L18.2,19.6 L18.3,19.7 C18.7191928,19.9814677 19.2824473,19.9062826 19.6131364,19.5247183 C19.9438256,19.1431539 19.9381908,18.5749315 19.6,18.2 L14.3,12.9 C15.4329183,11.5216847 16.0358551,9.78380814 16,8 C16,3.581722 12.418278,0 8,0 Z M8,14 C4.6862915,14 2,11.3137085 2,8 C2,4.6862915 4.6862915,2 8,2 C11.3137085,2 14,4.6862915 14,8 C14,9.59129894 13.367859,11.1174224 12.2426407,12.2426407 C11.1174224,13.367859 9.59129894,14 8,14 Z" id="Shape"></path>
+        </g>
+    </g>
+</svg>

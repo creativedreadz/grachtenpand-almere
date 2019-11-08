@@ -1,0 +1,32 @@
+.img-container {
+	@include flexbox;
+	@include flex-wrap(wrap);
+	@include flex-direction(row);
+	@include justify-content(flex-end);
+
+	@include respond-to-min('ml') {
+		padding-right: 80px;
+		margin-bottom: -50%;
+	}
+
+	img {
+		display: block;
+		position: relative;
+
+		&:nth-child(1) {	
+			z-index: 2;
+			margin-right: 50px;
+		}
+
+		&:nth-child(2) {
+			z-index: 3;
+			margin-top: -70px;
+			padding-right: 130px;
+		}
+
+		&:nth-child(3) {	
+			z-index: 1;
+			margin-top: -163px;
+		}
+	}
+}

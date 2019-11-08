@@ -1,0 +1,140 @@
+@import
+    "../libs/slick",
+    "../libs/slick-theme";
+
+.slick-slide {
+    outline: none;
+}
+
+.slick-dots {
+    margin: 15px 0px;
+
+    li {
+        font-family: $font-medium; 
+        margin: 0px 5px;
+
+        &:nth-child(1n) {
+            content: none;
+
+            @include respond-to-min('ml') {
+                content: '/';
+            }   
+        }
+
+    }
+        
+    .slick-active {
+        display: inline-block;
+    }  
+}
+
+.slick-dots li {
+    display: none;
+}   
+
+.slick-dots li.slick-active,
+.slick-dots li.slick-active + li,
+.slick-dots li.slick-active + li + li {
+    display: inline-block;
+}
+
+.slick-dots li:nth-last-child(1),
+.slick-dots li:nth-last-child(2),
+.slick-dots li:nth-last-child(3) {
+    display: inline-block;
+}
+
+.slick-dots li.slick-active ~ li:nth-last-child(1),
+.slick-dots li.slick-active ~ li:nth-last-child(2),
+.slick-dots li.slick-active ~ li:nth-last-child(3) {
+    display: none;
+}
+.slick-dots li.slick-active + li + li:nth-last-child(3),
+.slick-dots li.slick-active + li + li:nth-last-child(2),
+.slick-dots li.slick-active + li + li:nth-last-child(1),
+.slick-dots li.slick-active + li:nth-last-child(3),
+.slick-dots li.slick-active + li:nth-last-child(2),
+.slick-dots li.slick-active + li:nth-last-child(1){
+    display: inline-block;
+}
+
+
+
+.slick-prev, .slick-next {
+    top: -16px;
+    background-color: red;
+    width: 32px;
+    height: 32px;    
+    z-index: 10;
+}
+
+.slick-prev {
+    left: 0;
+}
+
+.slick-next {
+    right: 0;
+}
+
+.slick-prev:before, .slick-next:before {
+    content: '';
+    width: 6px;
+    height: 10px;
+    @include background-adaptive(#{$dir-img}/icon/icon-arrow-right-sm-white, png, 6px 10px);
+    display: block;
+    margin: auto;
+}   
+
+.slick-prev:before {
+    content: '';
+    transform: scaleX(-1);
+}
+
+
+.slick-prev--dots {
+    left: calc(50% - 70px);
+}
+
+.slick-next--dots {
+    right: calc(50% - 70px);
+}
+
+.slick-prev--dots, .slick-next--dots {
+    top: calc(100% - 26px);
+    background-color: transparent;
+    width: 20px;
+    height: 20px;      
+}
+
+.slick-prev--dots:before, .slick-next--dots:before {
+    content: '';
+    width: 6px;
+    height: 10px;
+    @include background-adaptive(#{$dir-img}/icon/icon-arrow-right-sm-black, png, 6px 10px);
+    display: block;
+    margin: auto;
+}   
+
+
+
+
+
+
+#media-slider-3 {
+    margin: 0px 0px 90px;
+
+    padding-bottom: 40px;
+    margin-bottom: 30px;
+}
+
+#media-slider {
+    margin-bottom: 30px;
+    padding-bottom: 50px;
+    max-height: 510px;
+
+	@include respond-to-min('ml') {
+		margin: 45px 0px 0px;
+	    max-height: none;
+	}
+
+}

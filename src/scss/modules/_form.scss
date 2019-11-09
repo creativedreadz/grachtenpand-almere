@@ -3,76 +3,114 @@ form {
 }
 
 input {
-    border: 0px;
-    padding: 6px 10px;
-    box-sizing: border-box;
-    outline: none;
-    font-size: 20px;
-    color: #3c3c3b;
-    width: 100%;
-    display: block;
-    margin: 0;
-    margin-bottom: 4px;
-    background: #e5e5e5;
+	display: inline-block;
+	font-family: map-get($fonts, Primary);
     -webkit-appearance: none;
     -webkit-border-radius: 0;
+    background: #e5e5e5;
     border-radius: 0;
+    border: 0px;
+    box-sizing: border-box;
+    color: #3c3c3b;
+    font-size: 20px;
+    margin: 0;
+    outline: none;
+    padding: 10px;
+    width: 100%;
+	@include transition(all 0.3s ease-in-out);
+
+	&:focus {
+		&::placeholder {
+			opacity: 0;
+		}
+	}
 }
 
-input {
-    border: 0px;
-    padding: 6px 10px;
-    box-sizing: border-box;
-    outline: none;
-    font-size: 20px;
-    color: #3c3c3b;
-    width: 100%;
-	display: inline-block;
-    margin: 0;
-    margin-bottom: 4px;
-    background: #e5e5e5;
-    -webkit-appearance: none;
-    -webkit-border-radius: 0;
-    border-radius: 0;
+input::placeholder {
+	color: #a7a7a7;
+	font-size: 20px;
+	@include transition(all 0.3s ease-in-out);
 }
 
 textarea {
-    color: #3c3c3b;
+	font-family: map-get($fonts, Primary);
     background: #e5e5e5;
-    display: inline-block;
     border: 0px;
-    padding: 6px 10px;
     box-sizing: border-box;
+    color: #a7a7a7;
+    display: inline-block;
+    font-size: 20px;
+    min-height: 135px;
     outline: none;
+    padding: 10px;
     width: 100%;
-    min-height: 150px;
+	@include transition(all 0.3s ease-in-out);
+
+	&:focus {
+		color: rgba(167, 167, 167, 0);
+	}
 }
 
 label {
-	display: block;
+    display: inline-block;
+	text-align: left;
+    font-size: 15px;
+    margin: -2px 0 1px;
+    padding-top: 16px;
+    @include flex(0, 1, 35%);
 }
 
-.form {
+.form__container {
 	@include flexbox;
 	@include flex-direction(row);
 	@include flex-wrap(wrap);
 	@include justify-content(flex-start);
 	@include align-items(stretch);
+    width: calc(100% + 4px);
+    margin: 0 -2px;
 }
 
 .form__col {
-	@include flex(2, 1, auto);
+	@include flex(0, 1, calc(50% - 4px));
+	margin: 0px 2px;
 
 	&:first-child {
-		max-width: 200px;
+		// max-width: 200px;
+	}
+
+	&:nth-child(2n) {
+
+		.form__row {
+			@include flex-direction(column);
+
+			label {
+			    padding-left: 11px;
+			}
+
+			textarea {
+				margin-top: 15px;
+			}
+		}
 	}
 
 	&:last-child {
 		@include flex(2, 1, 100%);
-		text-align: right;
+
+		.form__row {
+			@include flexbox;
+			@include flex-direction(row);
+			@include flex-wrap(nowrap);
+			@include justify-content(flex-end);
+		}
 	}
 }
 
 .form__row {
-	width: 100%;
+	width: 100%;	
+	@include flexbox;
+	@include flex-direction(row);
+	@include flex-wrap(nowrap);
+	@include justify-content(flex-start);
+	@include align-items(flex-start);
+	margin-bottom: 4px;
 }

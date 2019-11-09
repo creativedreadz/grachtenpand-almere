@@ -4,7 +4,8 @@
 	@include flex-wrap(nowrap);
 	@include justify-content(space-between);
 	@include align-items(stetch);
-	margin: 0 auto;
+	width: calc(100% + 30px);
+	margin: 0 -15px;
 }
 
 .box {

@@ -94,30 +94,30 @@ block content
 			.box-container
 				.box.box--twothird.box--white
 					form.form(action='', method='get')
+						.form__container
+							.form__col
+								.form__row
+									label(for='name') Naam: 
+									input(type='text', name='name', required='', placeholder='bijv. frits janssen')
+								.form__row
+									label(for='email') E-mail 
+									input(type='email', name='email', required='', placeholder='jan@planet.nl')
+								.form__row
+									label(for='phone') Telefoon 
+									input(type='number', name='phone', required='', placeholder='0612345678')
+								.form__row
+									label(for='subject') Onderwerp 
+									input(type='text', name='subject', required='', placeholder='Vraag')
 
-						.form__col
-							.form__row
-								label(for='name') Naam: 
-								input(type='text', name='name', required='', placeholder='bijv. frits janssen')
-							.form__row
-								label(for='email') E-mail 
-								input(type='email', name='email', required='', placeholder='jan@planet.nl')
-							.form__row
-								label(for='phone') Telefoon 
-								input(type='number', name='phone', required='', placeholder='0612345678')
-							.form__row
-								label(for='subject') Onderwerp 
-								input(type='text', name='subject', required='', placeholder='Vraag')
-
-						.form__col
-							.form__row
-								label(for='message') Bericht
-								textarea(name='message', rows='5', cols='33')
-									| Laat hier uw bericht achter
-						
-						.form__col
-							.form__row
-								button(type='submit') Verstuur
+							.form__col
+								.form__row
+									label(for='message') Bericht
+									textarea(name='message', rows='5', cols='33')
+										| Laat hier uw bericht achter
+							
+							.form__col
+								.form__row
+									button(type='submit') Verstuur
 
 				.box.box--onethird.box--white
 					h2 Contact

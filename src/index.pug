@@ -8,13 +8,13 @@ block content
 				.swiper-slide
 					img(src="/img/canal.jpg", alt="")
 				.swiper-slide
-					video(poster='/img/video-placeholder-01.jpg', preload='auto', loop='', autoplay='')
+					//- video(poster='/img/video-placeholder-01.jpg', preload='auto', loop='', autoplay='')
 						source(src='/video/grachtendpand.mp4', type='video/mp4')
 
 		.container.container--overlay
 			h1 Ook uitgekeken op een onpersoonlijk bedrijventerrein?
 
-	section.section.section--white#welcome
+	section.section.section--white
 		.container
 			h1 Huur een (klein) kantoor of werkplek in 't grachtenpand.
 
@@ -24,7 +24,7 @@ block content
 				li.list__item Slimme werkruimtes van alle gemakken voorzien
 				li.list__item Gratis parkeren
 
-	section.section.section--gray#hetpand
+	section.section.section--gray
 		.container
 			img(src="/img/logo-dark.png", alt="")
 			img(src="/img/dinnerroom.jpg", alt="")
@@ -40,7 +40,7 @@ block content
 
 	.section.section--gray.section--breakout.section--bg-photo(style="background-image: url('/img/collage.jpg');")
 
-	section.section.section--gray#kantoren
+	section.section.section--gray
 		.container
 			h1 Kantoren en Bedrijfsruimten
 			p  ‘t Grachtenpand is een van de eerste gebouwen van Almere en dateert uit 1978. Omdat het goed is onderhouden en veel kantoren onlangs nog zijn gerenoveerd, heeft het veel karakter en authenticiteit. Warme kleuren voeren de boventoon.
@@ -53,7 +53,7 @@ block content
 		.container
 			h1 Bekijk het pand in 360 graden
 
-			iframe(src='https://www.flexas.nl/embed/11614', style='width: 100%; height: 360px;')
+			//- iframe(src='https://www.flexas.nl/embed/11614', style='width: 100%; height: 360px;')
 
 	section.section.section--gray
 		.container
@@ -62,7 +62,7 @@ block content
 
 			p In het gebouw bevindt zich een drietal pantry’s waar een kleine lunch en een prima espresso kunnen worden gemaakt. Uiteraard zijn er ook vaatwasmachines aanwezig.
 
-	.section.section--gray.section--breakout.section--overlay--dotted.section--bg-photo#prijzen(style="background-image: url('/img/garden.jpg');")
+	.section.section--gray.section--breakout.section--overlay--dotted.section--bg-photo(style="background-image: url('/img/garden.jpg');")
 
 	section.section.section--gray
 		.container
@@ -78,7 +78,7 @@ block content
 
 	.section.section--gray.section--breakout.section--overlay--dotted.section--bg-photo(style="background-image: url('/img/roof.jpg');")
 
-	section.section.section--gray
+	section.section.section--gray#prijzen
 		.container
 			h1 Prijzen
 			p Kantoren: vanaf € 235,- per maand (excl. servicekosten)
@@ -87,9 +87,9 @@ block content
 
 			p In alle gevallen krijg je een eigen sleutel (borg € 50,-) en het gebouw staat jou 24 uur per dag ter beschikking.
 
-	section.section.section--gray#contact
-		#google-map
-		.container
+	section.section.section--full-height.section--white
+		#map
+		.container.container--overlay.container--content-center
 			.box-container
 				.box.box--twothird.box--white
 					form.form(action='', method='get')
@@ -143,4 +143,27 @@ block scripts
 			//-   disableOnInteraction: false,
 			//- },
 		});
+	script.
+		var map;
+		function initMap() {
+			map = new google.maps.Map(document.getElementById('map'), {
+				center: {lat: 52.326881, lng: 5.215161},
+				mapTypeId: google.maps.MapTypeId.HYBRID,
+				disableDefaultUI: true,
+				scrollwheel: false,
+				zoomControl: true,
+				zoom: 15,
+				zoomControlOptions: {
+					style: google.maps.ZoomControlStyle.SMALL
+				}
+			});
+		}
+	script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyA_jYYv6OsXqmyH6jc31VM4WaWMA3vuJPw&callback=initMap', async='', defer='')
+	//- script.
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-50895878-1', 'grachtenpand-almere.nl');
+		ga('send', 'pageview');
 

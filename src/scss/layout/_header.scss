@@ -9,6 +9,7 @@
 	@include align-items(center);
 	@include align-content(stretch);
 	position: fixed;
+	position: sticky;
 	top: 0;
 	left: 0;
 	right: 0;

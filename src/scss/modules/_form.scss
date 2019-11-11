@@ -101,6 +101,7 @@ label {
 			@include flex-direction(row);
 			@include flex-wrap(nowrap);
 			@include justify-content(flex-end);
+			margin-top: 16px;
 		}
 	}
 }

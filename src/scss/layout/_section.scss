@@ -1,12 +1,95 @@
-section {
-	background-color: #f6f6f6;
+section,
+.section {
 	padding: 100px 0px;
+	margin: 0;
+	position: relative;
+}
+
+.section + .section {
+	padding-top: 0;
+}
+
+.section--breakout {
+	padding: 0;
 
 	&:first-of-type {
-		padding-top: 80px;
+		padding-top: 0;
 	}
 }
 
-section + section {
+.section--bg-photo {
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	min-height: 33.33vh;
+
+	@include respond-to-min('xl') {
+		min-height: 50vh;
+	}
+}
+
+.section--overlay--dotted {
+	&::before {
+	    content: '';
+	    background-image: url(#{$dir-img}/dotted.png);
+	    position: absolute;
+	    bottom: 0;
+	    left: 0;
+	    top: 0;
+	    right: 0;
+	    z-index: 2;
+	}
+}
+
+
+
+
+
+
+.section--white {
+	background-color: #ffffff;
+}
+
+.section--white + .section--white {
 	padding-top: 0;
+}
+
+.section--white + .section--gray {
+	padding-top: 100px;
+
+	&:first-of-type {
+		padding-top: 100px;
+	}
+}
+
+.section--breakout + .section--white {
+	padding-top: 100px;
+
+	&:first-of-type {
+		padding-top: 100px;
+	}
+}
+
+.section--gray {
+	background-color: #f6f6f6;
+}
+
+.section--gray + .section--gray {
+	padding-top: 0;
+}
+
+.section--gray + .section--white {
+	padding-top: 100px;
+
+	&:first-of-type {
+		padding-top: 100px;
+	}
+}
+
+.section--breakout + .section--gray {
+	padding-top: 100px;
+
+	&:first-of-type {
+		padding-top: 100px;
+	}
 }

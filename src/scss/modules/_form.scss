@@ -20,6 +20,9 @@ input {
 	@include transition(all 0.3s ease-in-out);
 
 	&:focus {
+		color: white;
+		background-color: #be1522;
+
 		&::placeholder {
 			opacity: 0;
 		}
@@ -47,7 +50,12 @@ textarea {
 	@include transition(all 0.3s ease-in-out);
 
 	&:focus {
-		color: rgba(167, 167, 167, 0);
+		color: white;
+		background-color: #be1522;
+
+		&::placeholder {
+			opacity: 0;
+		}
 	}
 }
 

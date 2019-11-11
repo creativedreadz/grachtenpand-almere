@@ -2,6 +2,7 @@ section,
 .section {
 	padding: 100px 0px;
 	margin: 0;
+	box-sizing: border-box;
 	position: relative;
 }
 
@@ -30,18 +31,20 @@ section,
 
 .section--overlay--dotted {
 	&::before {
-	    content: '';
-	    background-image: url(#{$dir-img}/dotted.png);
-	    position: absolute;
-	    bottom: 0;
-	    left: 0;
-	    top: 0;
-	    right: 0;
-	    z-index: 2;
+		content: '';
+		background-image: url(#{$dir-img}/dotted.png);
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		top: 0;
+		right: 0;
+		z-index: 2;
 	}
 }
 
-
+.section--full-height {
+	min-height: 100vh;
+}
 
 
 

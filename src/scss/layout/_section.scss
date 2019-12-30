@@ -1,13 +1,27 @@
 section,
 .section {
-	padding: 100px 0px;
+	padding: 50px 0px;
 	margin: 0;
 	box-sizing: border-box;
 	position: relative;
+
+	@include respond-to-min('md') {
+		padding: 100px 0px;
+	}
 }
 
-.section + .section {
-	padding-top: 0;
+// .section + .section {
+// 	padding-top: 0;
+// }
+
+.section--first {
+	margin-top: 72px;
+}
+
+.section {
+	&:only-child {
+		min-height: calc(100vh - 72px);
+	}
 }
 
 .section--breakout {
@@ -29,6 +43,7 @@ section,
 	}
 }
 
+
 .section--overlay--dotted {
 	&::before {
 		content: '';
@@ -42,14 +57,38 @@ section,
 	}
 }
 
-.section--full-height {
-	min-height: 100vh;
-}
-
-.section--16-9-height {
+.section--slider {
 	height: 0;
 	padding-bottom: 56.25%;
-	background-color: orange;
+	overflow: hidden;
+
+	@include respond-to-min('lg') {
+		height: 66.66vh;
+		padding: 0;
+	}
+
+	.title {
+		display: none;
+		@include respond-to-min('md') {
+			display: block;
+		}
+	}
+
+	.logo + .title {
+		margin-top: 50px;
+	}
+
+	.section__arrow-down {
+		display: none;
+
+		@include respond-to-min('md') {
+			padding-bottom: 25px;
+			text-align: center;
+			display: inline-block;
+			margin: 0 auto;
+		}
+	}
+
 }
 
 .section--white {
@@ -61,18 +100,34 @@ section,
 }
 
 .section--white + .section--gray {
-	padding-top: 100px;
+	padding-top: 50px;
+
+	@include respond-to-min('md') {
+		padding-top: 100px;
+	}
 
 	&:first-of-type {
-		padding-top: 100px;
+		padding-top: 50px;
+
+		@include respond-to-min('md') {
+			padding-top: 100px;
+		}
 	}
 }
 
 .section--breakout + .section--white {
-	padding-top: 100px;
+	padding-top: 50px;
+
+	@include respond-to-min('md') {
+		padding-top: 100px;
+	}
 
 	&:first-of-type {
-		padding-top: 100px;
+		padding-top: 50px;
+
+		@include respond-to-min('md') {
+			padding-top: 100px;
+		}
 	}
 }
 
@@ -85,17 +140,61 @@ section,
 }
 
 .section--gray + .section--white {
-	padding-top: 100px;
+	padding-top: 50px;
+
+	@include respond-to-min('md') {
+		padding-top: 100px;
+	}
 
 	&:first-of-type {
-		padding-top: 100px;
+		padding-top: 50px;
+
+		@include respond-to-min('md') {
+			padding-top: 100px;
+		}
 	}
 }
 
 .section--breakout + .section--gray {
-	padding-top: 100px;
+	padding-top: 50px;
+
+	@include respond-to-min('md') {
+		padding-top: 100px;
+	}
 
 	&:first-of-type {
+		padding-top: 50px;
+
+		@include respond-to-min('md') {
+			padding-top: 100px;
+		}
+	}
+}
+
+.section--map {
+	padding-top: 50vh;
+
+	@include respond-to-min('lg') {
 		padding-top: 100px;
+		@include flexbox;
+		@include flex-direction(column);
+		@include flex-wrap(wrap);
+		@include justify-content(center);
+		@include align-items(center);
+		min-height: 100vh;
+	}
+}
+
+.section--fullheight {
+	min-height: 100vh;
+}
+
+.section--text-light {
+	h1, h2, h3, h4, h5, h6 {
+		color: #ffffff;
+	}
+
+	a, p, small, ul, label, button {
+		color: #ffffff;
 	}
 }

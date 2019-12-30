@@ -5,21 +5,30 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: 700;
 	-webkit-font-smoothing: antialiased;
     -webkit-text-size-adjust: 100%;
-    font-size: 23px;
-    line-height: 28px;
+    font-size: 20px;
+    line-height: 1.3;
 
     &:first-child,
     &:first-of-type {
     	margin-top: 0;
     }
+
+	@include respond-to-min('md') {
+	    font-size: 23px;
+	}
 }
 
 a, p, small, ul, label, button {
 	font-family: map-get($fonts, Primary);
 	color: #3c3c3b;
-	font-size: 23px;
+	font-size: 20px;
+	line-height: 1.3;
 	-webkit-font-smoothing: antialiased;
     -webkit-text-size-adjust: 100%;
+
+	@include respond-to-min('md') {
+		font-size: 23px;
+	}
 }
 
 a {

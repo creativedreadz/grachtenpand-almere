@@ -4,15 +4,46 @@ body {
 	font-smooth: auto;
 	-webkit-font-smoothing: auto;
 	-moz-osx-font-smoothing: auto;
+
+	&.no-overflow {
+		overflow: hidden;
+	}
 }
 
 img {
 	width: auto;
 	max-width: 100%;
 
-	& + img {
+	& + img,
+	& + picture {
 		margin-top: 50px;
 	}
+
+	& + h1, h2, h3, h4, h5, h6 {
+		margin-top: 50px;
+
+	    &:first-child,
+	    &:first-of-type {
+	    	margin-top: 50px;
+	    }
+	}
+}
+
+p {
+
+	& + .btn {
+		margin-top: 25px;
+	}
+}
+
+html {
+  --scroll-behavior: smooth;
+  scroll-behavior: smooth;
+}
+
+picture {
+	display: block;
+	width: 100%;
 
 	& + h1, h2, h3, h4, h5, h6 {
 		margin-top: 50px;

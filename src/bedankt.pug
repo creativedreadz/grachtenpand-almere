@@ -1,0 +1,33 @@
+extends extends/master
+
+block content
+	.wrapper
+		main
+			section.section.section--fullheight.section--gray
+				.container.container--small 
+					img(src="/img/logo-dark.png", alt="")
+					h1 Hartelijk bedankt, uw bericht is verzonden
+					p Bedankt voor het invullen van het contactformulier. Grachtenpand Almere zal zo spoedig mogelijk contact met u opnemen.
+
+					a.btn(href="/") terug naar de website
+
+	footer.footer
+		.footer__container
+			ul.footer__list
+				li.footer__list-item Pulsar Consult bv
+				li.footer__list-item 
+					a(href="tel:+31653343834") 06-5334 3834
+				li.footer__list-item 
+					a(href="mailto:contact@grachtenpand-almere.nl") contact@grachtenpand-almere.nl
+
+block scripts
+	script(type='text/javascript', src='js/mobile.js')
+	script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyA_jYYv6OsXqmyH6jc31VM4WaWMA3vuJPw&callback=initMap', async='', defer='')
+	//- script.
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-50895878-1', 'grachtenpand-almere.nl');
+		ga('send', 'pageview');
+

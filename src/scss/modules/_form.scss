@@ -1,5 +1,5 @@
 form {
-
+	text-align: left;
 }
 
 input {
@@ -59,23 +59,40 @@ textarea {
 	}
 }
 
+textarea::placeholder {
+	color: #a7a7a7;
+	font-size: 20px;
+	@include transition(all 0.3s ease-in-out);
+}
+
 label {
     display: inline-block;
 	text-align: left;
     font-size: 15px;
-    margin: -2px 0 1px;
-    padding-top: 16px;
     @include flex(0, 1, 35%);
+	height: 42px;
+	@include flexbox;
+	@include align-items(center);
+
+
+	@include respond-to-min('lg') {
+    // margin: -2px 0 1px;
+    // padding-top: 16px;
+    // min-width: 120px;
+	}
 }
 
 .form__container {
-	@include flexbox;
-	@include flex-direction(row);
-	@include flex-wrap(wrap);
-	@include justify-content(flex-start);
-	@include align-items(stretch);
-    width: calc(100% + 4px);
-    margin: 0 -2px;
+
+	@include respond-to-min('lg') {
+		@include flexbox;
+		@include flex-direction(row);
+		@include flex-wrap(wrap);
+		@include justify-content(flex-start);
+		@include align-items(stretch);
+	    width: calc(100% + 4px);
+	    margin: 0 -2px;
+	}
 }
 
 .form__col {
@@ -89,14 +106,16 @@ label {
 	&:nth-child(2n) {
 
 		.form__row {
-			@include flex-direction(column);
+			@include respond-to-min('lg') {
+				@include flex-wrap(wrap);
 
-			label {
-			    padding-left: 11px;
-			}
+				label {
+				    padding-left: 11px;
+				}
 
-			textarea {
-				margin-top: 15px;
+				textarea {
+					margin-top: 4px;
+				}
 			}
 		}
 	}
@@ -107,19 +126,28 @@ label {
 		.form__row {
 			@include flexbox;
 			@include flex-direction(row);
-			@include flex-wrap(nowrap);
-			@include justify-content(flex-end);
+			@include flex-wrap(wrap);
+			@include justify-content(space-between);
 			margin-top: 16px;
 		}
 	}
+
 }
+
+.grecaptcha-badge {
+  display: none;
+}
+
 
 .form__row {
 	width: 100%;	
-	@include flexbox;
-	@include flex-direction(row);
-	@include flex-wrap(nowrap);
-	@include justify-content(flex-start);
-	@include align-items(flex-start);
-	margin-bottom: 4px;
+
+	@include respond-to-min('md') {
+		margin-bottom: 4px;
+		@include flexbox;
+		@include flex-direction(row);
+		@include flex-wrap(nowrap);
+		@include justify-content(flex-start);
+		@include align-items(flex-start);
+	}
 }

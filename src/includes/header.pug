@@ -1,16 +1,22 @@
 header.header
-	nav.header__navigation
-		ul.header__navigation-list
-			li.header__navigation-list-item.is-active
-				a.header__navigation-list-anchor(href="#welkom") Welkom
-			li.header__navigation-list-item
-				a.header__navigation-list-anchor(href="#hetpand") 'T Pand
-			li.header__navigation-list-item
-				a.header__navigation-list-anchor(href="#kantoren") De ruimtes
-			li.header__navigation-list-item
-				a.header__navigation-list-anchor(href="#prijzen") Prijzen
-			li.header__navigation-list-item
-				a.header__navigation-list-anchor(href="#contact") Contact
+	.header__logo
+		.logo.logo--mini
 
-	a(href="#").header__menu-btn
-		span.icon.icon-grid
+	.header__container
+		.logo
+
+		nav.header__navigation
+			ul.header__navigation-list
+				li.header__navigation-list-item.is-active
+					a(href="#welkom") Welkom
+				li.header__navigation-list-item
+					a(href="#hetpand") 'T Pand
+				li.header__navigation-list-item
+					a(href="#kantoren") De ruimtes
+				li.header__navigation-list-item
+					a(href="#prijzen") Prijzen
+				li.header__navigation-list-item
+					a(href="#contact") Contact
+
+	a.header__menu-btn(href='::javascript')
+		span.header__menu-btn-icon

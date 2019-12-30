@@ -6,22 +6,19 @@ doctype html
 html(lang="nl")
 	head
 		meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no")
+		meta(charset='utf-8')
+		meta(http-equiv='X-UA-Compatible', content='IE=edge')
+		meta(name='mobile-web-app-capable', content='yes')
 		link(href="css/style.css", rel="stylesheet")
 		link(href="img/favicon.ico", rel="shortcut icon" )
+		script(src='https://www.google.com/recaptcha/api.js?render=6LcLf8UUAAAAAKpZLzenysePHmjJdx26iTCptebL')
 
 		block head
 			
 		title #{siteTitle}
 
-	body
-
-		include ../includes/header
-	
-		.wrapper
-			main
-				block content
-		
-		include ../includes/footer
+	body.body
+		block content
 
 		block scripts
-			//- script(type='text/javascript', src='js/mobile.js')
+			script(type='text/javascript', src='js/mobile.js')

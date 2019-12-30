@@ -1,185 +1,200 @@
 extends extends/master
 
 block content
+	header.header
+		.header__logo
+			.logo.logo--mini
 
-	section.section.section--16-9-height.section--gray.section--breakout#welkom
-		.swiper-container
-			.swiper-wrapper
-				.swiper-slide
-					img(src="/img/canal.jpg", alt="")
-				.swiper-slide
-					//- video(poster='/img/video-placeholder-01.jpg', preload='auto', loop='', autoplay='')
-						source(src='/video/grachtendpand.mp4', type='video/mp4')
+		.header__container
+			.logo
 
-		.container.container--overlay
-			h1 Ook uitgekeken op een onpersoonlijk bedrijventerrein?
+			nav.header__navigation
+				ul.header__navigation-list
+					li.header__navigation-list-item.is-active
+						a(href="#welkom") Welkom
+					li.header__navigation-list-item
+						a(href="#hetpand") 'T Pand
+					li.header__navigation-list-item
+						a(href="#kantoren") De ruimtes
+					li.header__navigation-list-item
+						a(href="#prijzen") Prijzen
+					li.header__navigation-list-item
+						a(href="#contact") Contact
 
-	section.section.section--white
-		.container
-			h1 Huur een (klein) kantoor of werkplek in 't grachtenpand.
+		a.header__menu-btn(href='::javascript')
+			span.header__menu-btn-icon
 
-			ul.list.list--type-01
-				li.list__item Hartje centrum Almere-Haven
-				li.list__item Representatief en goed bereikbaar
-				li.list__item Slimme werkruimtes van alle gemakken voorzien
-				li.list__item Gratis parkeren
+	.wrapper
+		main
+			section.section.section--first.section--slider.section--gray.section--text-light.section--overlay--dotted.section--breakout#welkom
+				.swiper-container
+					.swiper-wrapper
+						.swiper-slide
+							.swiper-slide__background(style="background-image: url('/img/canal.jpg');")
 
-	section.section.section--gray#hetpand
-		.container
-			img(src="/img/logo-dark.png", alt="")
-			img(src="/img/dinnerroom.jpg", alt="")
-			h1 Laat je uitdagen
-			p  Veel zelfstandigen beginnen thuis. Maar zijn dat na een tijdje ook beu. Laat je enthousiasmeren door andere ondernemers zoals jij. Maak contact, vergroot je netwerk. In het pand is alles aanwezig om geconcentreerd te werken op een goede werkplek met alle benodigde ondersteunende faciliteiten. Er zijn meerdere bedrijven gevestigd. Innovatief en grotendeels werkzaam in de dienstverlenende en creatieve sector.
+						.swiper-slide.video
+							video(poster='/img/video-placeholder-01.jpg', preload='auto', loop='', autoplay='')
+								source(src='video/grachtendpand.mp4', type='video/mp4')
 
-	section.section.section--gray
-		.container
-			h1 De locatie
-			p Amere-Haven is in de loop der jaren uitgegroeid tot een stadsdeel met karakter en een duidelijke eigen identiteit. Met name de grachten zijn gezichtsbepalend en vormen een uitstraling waar menige onderneming zich graag mee associeert. Flexcentrum ‘t Grachtenpand ligt centraal aan de Kerkgracht.
+				.container.container--overlay.container--content-center
+					.logo
+					h1.title Ook uitgekeken op een onpersoonlijk bedrijventerrein?
 
-			p Het centrum van Almere-Haven heeft ook veel te bieden als het gaat om levendigheid. Aan de haven zelf (op 3 minuten loopafstand) bevinden zich talloze terrassen waar het heerlijk toeven is. Er is een schakering aan restaurants waar de mogelijkheden variëren van eerste klas tot een broodje tussen de middag.
+				.container.container--overlay-bottom
+					a(href="#huureenkantoor").section__arrow-down
+						.icon.icon-arrow-down
 
-	.section.section--gray.section--breakout.section--bg-photo#kantoren(style="background-image: url('/img/collage.jpg');")
+			section.section.section--white#huureenkantoor
+				.container
+					h1 Huur een (klein) kantoor of werkplek in 't grachtenpand.
 
-	section.section.section--gray
-		.container
-			h1 Kantoren en Bedrijfsruimten
-			p  ‘t Grachtenpand is een van de eerste gebouwen van Almere en dateert uit 1978. Omdat het goed is onderhouden en veel kantoren onlangs nog zijn gerenoveerd, heeft het veel karakter en authenticiteit. Warme kleuren voeren de boventoon.
+					ul.list.list--type-01
+						li.list__item Hartje centrum Almere-Haven
+						li.list__item Representatief en goed bereikbaar
+						li.list__item Slimme werkruimtes van alle gemakken voorzien
+						li.list__item Gratis parkeren
 
-			p Het gebouw is veel groter dan het aan de voorzijde lijkt. Een deel van de beschikbare kantoren kijkt uit op de gracht en een ander deel kijkt uit op de groene patio’s. De ruimtes variëren in grootte van 18 m2 tot circa 100 m2. Ook is het mogelijk meerdere ruimtes te huren, zodat de indeling flexibel is.
+			section.section.section--gray#hetpand
+				.container
+					img(src="/img/logo-dark.png", alt="")
 
-			p Alle ruimtes zijn voorzien van vloerbedekking, plafondverlichting en zonnewering in de vorm van lamellen.
+					picture
+						source(media='(min-width: 1024px)', srcset='/img/dinnerroom-lg.jpg')
+						source(media='(min-width: 768px)', srcset='/img/dinnerroom-md.jpg')
+						source(media='(min-width: 320px)', srcset='/img/dinnerroom-sm.jpg')
+						img(src='/img/dinnerroom-lg.jpg' alt='My image', srcset='/img/dinnerroom-lg.jpg')
 
-	section.section.section--gray
-		.container
-			h1 Bekijk het pand in 360 graden
+					h1 Laat je uitdagen
+					p  Veel zelfstandigen beginnen thuis. Maar zijn dat na een tijdje ook beu. Laat je enthousiasmeren door andere ondernemers zoals jij. Maak contact, vergroot je netwerk. In het pand is alles aanwezig om geconcentreerd te werken op een goede werkplek met alle benodigde ondersteunende faciliteiten. Er zijn meerdere bedrijven gevestigd. Innovatief en grotendeels werkzaam in de dienstverlenende en creatieve sector.
 
-			//- iframe(src='https://www.flexas.nl/embed/11614', style='width: 100%; height: 360px;')
+			section.section.section--gray
+				.container
+					h1 De locatie
+					p Amere-Haven is in de loop der jaren uitgegroeid tot een stadsdeel met karakter en een duidelijke eigen identiteit. Met name de grachten zijn gezichtsbepalend en vormen een uitstraling waar menige onderneming zich graag mee associeert. Flexcentrum ‘t Grachtenpand ligt centraal aan de Kerkgracht.
 
-	section.section.section--gray
-		.container
-			h1 Faciliteiten
-			p Glasvezel is aanwezig en Wifi is overal gratis in het gebouw beschikbaar. De intercom werkt zodanig dat vanaf elke willekeurige telefoon met bezoekers kan worden gesproken en opengedaan. Dus ook als je niet op kantoor bent.
+					p Het centrum van Almere-Haven heeft ook veel te bieden als het gaat om levendigheid. Aan de haven zelf (op 3 minuten loopafstand) bevinden zich talloze terrassen waar het heerlijk toeven is. Er is een schakering aan restaurants waar de mogelijkheden variëren van eerste klas tot een broodje tussen de middag.
 
-			p In het gebouw bevindt zich een drietal pantry’s waar een kleine lunch en een prima espresso kunnen worden gemaakt. Uiteraard zijn er ook vaatwasmachines aanwezig.
+			.section.section--gray.section--breakout.section--bg-photo#kantoren(style="background-image: url('/img/collage.jpg');")
 
-	.section.section--gray.section--breakout.section--overlay--dotted.section--bg-photo(style="background-image: url('/img/garden.jpg');")
+			section.section.section--gray
+				.container
+					h1 Kantoren en Bedrijfsruimten
+					p  ‘t Grachtenpand is een van de eerste gebouwen van Almere en dateert uit 1978. Omdat het goed is onderhouden en veel kantoren onlangs nog zijn gerenoveerd, heeft het veel karakter en authenticiteit. Warme kleuren voeren de boventoon.
 
-	section.section.section--gray
-		.container
-			h1 Flexplekken
-			p  Er is een aantal flexplekken beschikbaar die voor één of meerdere dagen per week gehuurd kunnen worden. Er zijn kasten waarin je jouw spullen op kunt bergen. Je krijgt een naambordje bij de voordeur en als er gebeld wordt gaat jouw eigen telefoon. Kopiëren en printen kan voor een klein bedrag.
+					p Het gebouw is veel groter dan het aan de voorzijde lijkt. Een deel van de beschikbare kantoren kijkt uit op de gracht en een ander deel kijkt uit op de groene patio’s. De ruimtes variëren in grootte van 18 m2 tot circa 100 m2. Ook is het mogelijk meerdere ruimtes te huren, zodat de indeling flexibel is.
 
-	section.section.section--gray
-		.container
-			h1 Bereikbaarheid en parkeren
-			p Het is ook mogelijk het gebouw aan de achterzijde te betreden waar veel parkeerruimte is. Mocht het daar niet meteen lukken, dan staat er een ruime openbare parkeergarage tot je beschikking op nog geen 100 meter afstand.
+					p Alle ruimtes zijn voorzien van vloerbedekking, plafondverlichting en zonnewering in de vorm van lamellen.
 
-			p Openbaarvervoer rijdt af en aan en is op 2 min. loopafstand te vinden. Amsterdam (Amstelstation) is 35 minuten en Almere-Stad nog geen 20.
+			section.section.section--gray
+				.container
+					h1 Bekijk het pand in 360 graden
 
-	.section.section--gray.section--breakout.section--overlay--dotted.section--bg-photo#prijzen(style="background-image: url('/img/roof.jpg');")
+					iframe(src='https://www.flexas.nl/embed/11614', style='width: 100%; height: 360px;')
 
-	section.section.section--gray
-		.container
-			h1 Prijzen
-			p Kantoren: vanaf € 235,- per maand (excl. servicekosten)
+			section.section.section--gray
+				.container
+					h1 Faciliteiten
+					p Glasvezel is aanwezig en Wifi is overal gratis in het gebouw beschikbaar. De intercom werkt zodanig dat vanaf elke willekeurige telefoon met bezoekers kan worden gesproken en opengedaan. Dus ook als je niet op kantoor bent.
 
-			p Flexplek: vanaf € 30,- per maand (1 dag per week, incl. servicekosten)
+					p In het gebouw bevindt zich een drietal pantry’s waar een kleine lunch en een prima espresso kunnen worden gemaakt. Uiteraard zijn er ook vaatwasmachines aanwezig.
 
-			p In alle gevallen krijg je een eigen sleutel (borg € 50,-) en het gebouw staat jou 24 uur per dag ter beschikking.
+			.section.section--gray.section--breakout.section--overlay--dotted.section--bg-photo(style="background-image: url('/img/garden.jpg');")
 
-	section.section.section--full-height.section--white#contact
-		#map
-		.container.container--overlay.container--content-center
-			.box-container
-				.box.box--twothird.box--white
-					form.form(action='', method='get')
-						.form__container
-							.form__col
-								.form__row
-									label(for='name') Naam: 
-									input(type='text', name='name', required='', placeholder='bijv. frits janssen')
-								.form__row
-									label(for='email') E-mail 
-									input(type='email', name='email', required='', placeholder='jan@planet.nl')
-								.form__row
-									label(for='phone') Telefoon 
-									input(type='number', name='phone', required='', placeholder='0612345678')
-								.form__row
-									label(for='subject') Onderwerp 
-									input(type='text', name='subject', required='', placeholder='Vraag')
+			section.section.section--gray
+				.container
+					h1 Flexplekken
+					p  Er is een aantal flexplekken beschikbaar die voor één of meerdere dagen per week gehuurd kunnen worden. Er zijn kasten waarin je jouw spullen op kunt bergen. Je krijgt een naambordje bij de voordeur en als er gebeld wordt gaat jouw eigen telefoon. Kopiëren en printen kan voor een klein bedrag.
 
-							.form__col
-								.form__row
-									label(for='message') Bericht
-									textarea(name='message', rows='5', cols='33', placeholder='Laat hier uw bericht achter')
-							
-							.form__col
-								.form__row
-									button(type='submit') Verstuur
+			section.section.section--gray
+				.container
+					h1 Bereikbaarheid en parkeren
+					p Het is ook mogelijk het gebouw aan de achterzijde te betreden waar veel parkeerruimte is. Mocht het daar niet meteen lukken, dan staat er een ruime openbare parkeergarage tot je beschikking op nog geen 100 meter afstand.
+
+					p Openbaarvervoer rijdt af en aan en is op 2 min. loopafstand te vinden. Amsterdam (Amstelstation) is 35 minuten en Almere-Stad nog geen 20.
+
+			.section.section--gray.section--breakout.section--overlay--dotted.section--bg-photo#prijzen(style="background-image: url('/img/roof.jpg');")
+
+			section.section.section--gray
+				.container
+					h1 Prijzen
+					p Kantoren: vanaf € 235,- per maand (excl. servicekosten)
+
+					p Flexplek: vanaf € 30,- per maand (1 dag per week, incl. servicekosten)
+
+					p In alle gevallen krijg je een eigen sleutel (borg € 50,-) en het gebouw staat jou 24 uur per dag ter beschikking.
+
+			section.section.section--map#contact
+				#map
+				.container
+					.box-container
+						.box.box--twothird.box--white
+							form.form(action='https://getform.io/f/df962bdb-c846-4996-afcc-c315ed219edc', method='POST')
+								.form__container
+									.form__col
+										.form__row
+											label(for='name') Naam: 
+											input(type='text', name='name', required='', placeholder='bijv. frits janssen')
+										.form__row
+											label(for='email') E-mail 
+											input(type='email', name='email', required='', placeholder='jan@planet.nl')
+										.form__row
+											label(for='phone') Telefoon 
+											input(type='number', name='phone', required='', placeholder='0612345678')
+										.form__row
+											label(for='subject') Onderwerp 
+											input(type='text', name='subject', required='', placeholder='Vraag')
+
+									.form__col
+										.form__row
+											label(for='message') Bericht
+											textarea(name='message', rows='5', cols='33', required='', placeholder='Laat hier uw bericht achter')
+
+									.form__col
+										.form__row
+									
+									.form__col
+										.form__row
+											.g-recaptcha(data-sitekey='6LcLf8UUAAAAAKpZLzenysePHmjJdx26iTCptebL')
+
+											button(type='submit') Verstuur
 
 
-				.box.box--onethird.box--white
-					h2 Contact
-					ul.list.list--type-02
-						li.list__item Pulsar Consult bv
-						li.list__item Arnold Trampe
-						li.list__item Kerkgracht 32
-						li.list__item 1354 AM, Almere-Haven
-						li.list__item 
-							a(href="tel:+31653343834") 06-5334 3834
-						li.list__item 
-							a(href="mailto:contact@grachtenpand-almere.nl") contact@grachtenpand-almere.nl
+						.box.box--onethird.box--white
+							h2 Contact
+							ul.list.list--type-02
+								li.list__item Pulsar Consult bv
+								li.list__item Arnold Trampe
+								li.list__item Kerkgracht 32
+								li.list__item 1354 AM, Almere-Haven
+								li.list__item 
+									a(href="tel:+31653343834") 06-5334 3834
+								li.list__item 
+									a(href="mailto:contact@grachtenpand-almere.nl") contact@grachtenpand-almere.nl
 
+	footer.footer
+		.footer__container
+			ul.footer__list
+				li.footer__list-item Pulsar Consult bv
+				li.footer__list-item 
+					a(href="tel:+31653343834") 06-5334 3834
+				li.footer__list-item 
+					a(href="mailto:contact@grachtenpand-almere.nl") contact@grachtenpand-almere.nl
 
 block scripts
+	script(type='text/javascript', src='js/mobile.js')
 	script(src='https://swiperjs.com/package/js/swiper.min.js')
+	script(src='https://unpkg.com/smoothscroll-polyfill/dist/smoothscroll.min.js')
+	script(src='https://unpkg.com/smoothscroll-anchor-polyfill')
 	script.
-		var swiper = new Swiper('.swiper-container', {
-			spaceBetween: 0,
+		var mySwiper = new Swiper('.swiper-container', {
+			draggable: false,
 			effect: 'fade',
 			loop: true,
-			//- autoplay: {
-			//-   delay: 5000,
-			//-   disableOnInteraction: false,
-			//- },
-		});
-	script.
-		document.addEventListener('click', function(e) {
-			if (e.target.tagName !== 'A') return;
-			if ((e.target.href && e.target.href.indexOf('#') != -1) && ((e.target.pathname == location.pathname) || ('/' + e.target.pathname == location.pathname)) && (e.target.search == location.search)) {
-				scrollAnchors(e, e.target);
+			autoplay: {
+				delay: 5000,
+				disableOnInteraction: false,
 			}
 		});
-
-		function scrollAnchors(e, respond = null) {
-			// const distanceToTop = el => Math.floor(el.getBoundingClientRect().top);
-			function distanceToTop(el) {
-				return Math.floor(el.getBoundingClientRect().top);
-			}
-			e.preventDefault();
-			var targetID = (respond) ? respond.getAttribute('href') : this.getAttribute('href');
-			var targetAnchor = document.querySelector(targetID);
-			if (!targetAnchor) return;
-			var originalTop = distanceToTop(targetAnchor);
-			window.scrollBy({
-				top: originalTop,
-				left: 0,
-				behavior: 'smooth'
-			});
-			var checkIfDone = setInterval(function() {
-				var atBottom = window.innerHeight + window.pageYOffset >= document.body.offsetHeight - 2;
-				if (distanceToTop(targetAnchor) === 0 || atBottom) {
-					targetAnchor.tabIndex = '-1';
-					targetAnchor.focus();
-					if ('history' in window) {
-						window.history.pushState('', '', targetID);
-					} else {
-						window.location = targetID;
-					}
-					clearInterval(checkIfDone);
-				}
-			}, 100);
-		}
 	script.
 		var map;
 		function initMap() {
@@ -203,4 +218,3 @@ block scripts
 		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 		ga('create', 'UA-50895878-1', 'grachtenpand-almere.nl');
 		ga('send', 'pageview');
-

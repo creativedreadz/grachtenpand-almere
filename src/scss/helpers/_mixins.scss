@@ -28,38 +28,6 @@
 }
 
 // ---------------------------------------------
-// Gradients
-// Alas, we can't use the prefix-selector mixin here
-//
-// Usage: @include bg-linear-gradient(#333, #3456ba);
-// ---------------------------------------------
-
-@mixin bg-linear-gradient($color1: #ccc, $color2: #000, $direction: 'vertical', $start: 0%, $end: 100%) {
-	background-color: $color2;
-
-	@if ($direction == 'vertical') {
-		// Check if CSS3 vendor prefixes are needed (see _config.scss)
-		@if -support-vendor-prefixes {
-			background-image: -webkit-linear-gradient($color1 $start, $color2 $end);
-			background-image: -o-linear-gradient($color1 $start, $color2 $end);
-			background-image: linear-gradient($color1 $start, $color2 $end);
-		}
-		// Standard W3C CSS3 variant
-		background-image: linear-gradient(to bottom, $color1, $color2);
-	}
-	@else {
-		// Horizontal
-
-		@if -support-vendor-prefixes {
-			background-image: -webkit-linear-gradient(left, $color1 $start, $color2 $end);
-			background-image: -o-linear-gradient(left, $color1 $start, $color2 $end);
-		}
-
-		background-image: linear-gradient(to right, $color1 $start, $color2 $end);
-	}
-}
-
-// ---------------------------------------------
 // @font-face
 // var $dir-font is listed in _config.scss
 // Don't forget to add the proper mime-types 
@@ -79,18 +47,6 @@
 		font-weight: $font-weight;
 		font-style: $font-style;
 	}
-}
-
-// ---------------------------------------------
-// Convert font-size from pixels to rem unit
-// With pixel fallback for old web browsers
-//
-// Usage: @include font-size-rem(18);
-// ---------------------------------------------
-
-@mixin font-size-rem($size) {
-	font-size: 0px + $size; // Fallback		
-	font-size: 0rem + $size / $font-default-size; // Font-size you set on the HTML tag, see _config.scss
 }
 
 // ---------------------------------------------
@@ -123,25 +79,6 @@
 
 	// Standard W3C CSS3 variant
 	#{$property}: $value;
-}
-
-
-// ---------------------------------------------
-// Place overlay over element and use the width and height of the parent
-// without having to know the dimensions of the parent;
-// just make sure the parent has a position: relative;
-// use the offset to create a smaller overlay
-//
-// Usage: @include fillout(4px); or @include fillout();
-// ---------------------------------------------
-
-@mixin fillout($offset: 0px) {
-	bottom: $offset;
-	display: block;
-	left: $offset;
-	position: absolute;
-	right: $offset;
-	top: $offset;
 }
 
 // ---------------------------------------------
@@ -177,19 +114,11 @@
 }
 
 // ---------------------------------------------
-// Fade Parallax
+// Transform
+//
+// Usage: @include transform(translateX, -50%);
 // ---------------------------------------------
-@mixin fadeParallax($speed: 0.4) {
-	@if $speed > 0 {
-		top: 0;
-		opacity: 1;
-		position: relative;
-		transition-delay: 0.5s;
-		@include transition(opacity #{$speed}s ease-in-out, top #{$speed}s ease-in);
 
-		&.is-faded {
-			opacity: 0;
-			top: 56px;
-		}		
-	}
+@mixin transform($val) {
+	@include prefix-selector(transform, $val);
 }
